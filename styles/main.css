@@ -1,0 +1,135 @@
+* {box-sizing: border-box; }
+body { margin:0; }
+h1 {margin-left: 1rem}
+
+/* CSS rules for Navigation */
+.main-nav .nav-button {
+    position: absolute;
+    font-size: 2rem;
+    top: 1rem;
+    right: 1rem;
+}
+/* change default displays for List Items (li) */
+.main-nav ul {
+    margin: 0;
+    padding: 0;
+    /* mobile first, so hide the menu to start */
+    display: none;
+    list-style: none;
+    background-color:peachpuff;
+}
+.main-nav ul.active {
+    display:block;
+}
+.main-nav a {
+    padding: 0.5rem 1rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-decoration: none;
+    text-align:right;
+    display: block;
+    color: #333;
+    
+}
+.main-nav a:hover, .main-nav a:focus {
+  background: #ccc;
+  color: black;
+}
+
+
+
+/* end of CSS rules for Navigation */
+
+
+.flex { 
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.flex img { width:100%; }
+
+p { 
+    padding-left:1rem;
+    padding-right:1rem;
+}
+
+/* styles for project page */
+ul.project {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding:0px;
+}
+
+ul.project li {
+  height: 40vh;
+  flex-grow: 1;
+}
+
+ul.project li:last-child {
+  flex-grow: 10;
+}
+
+ul.project li img {
+  max-height: 100%;
+  min-width: 100%;
+  object-fit: cover;
+  vertical-align: bottom;
+}
+
+/* end of styles for project page */
+
+
+/* footer styles */
+footer {
+    text-align:center;
+    background-color: peachpuff;
+    padding-top:0.5rem;
+    padding-bottom:0.5rem;
+}
+
+/* Media queries go at the end */
+@media screen and (min-width: 800px) {
+    /* hide the menu button on larger screen */
+    .main-nav .nav-button {
+        display:none;
+    }
+    /* change how the menu displays */
+    .main-nav ul, .main-nav ul.active {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        /*flex-start => left justified*/
+        list-style: none;
+        align-items: flex-end;
+    }
+    .main-nav a {
+      display: flex;
+      align-items: flex-end;
+      color: #333;
+    }
+    
+    .flex div {
+        width:50%
+    }
+    
+    /*footer styles*/
+    footer {
+        display:flex;
+    }
+    footer div {
+        width:50%
+    }
+    footer div.copy {
+        text-align:left;
+    }
+    footer div.contact {
+        text-align:right;
+    }
+    
+    
+}
+
